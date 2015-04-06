@@ -43,6 +43,30 @@
         <script type="text/javascript" src="js/main.js"></script>
     </head>
 
+	<style>
+		a.tip {
+	  	 	position: relative;
+	  		text-decoration: none;
+		}
+		a.tip:hover:before {
+	  		display: block;
+	 	 	position: absolute;
+	 	 	padding: .5em;
+	 	 	content: attr(title);
+	 	 	min-width: 120px;
+	 	 	text-align: center;
+	 	 	width: auto;
+		  	height: auto;
+
+	 	 	top: -32px;
+			left:-80px;
+	 	 	background: rgba(0,0,0,.8);
+
+	 	 	color: #fff;
+	 	 	font-size: .86em;
+		}
+	</style>
+
     <body class="bg_132c42 color_197bbf  logo_light">
         <div class="row-wrap wrapper bg_132c42 color_197bbf light_skin">
             <div class="row-space">
@@ -56,7 +80,7 @@
                             <li class="lnkd"><a href="https://fr.linkedin.com/pub/jean-christophe-paris/9b/9a9/434/" target="_blank"><span class="socicon">j</span></a></li>
                             <li class="viadeo"><a href="http://www.viadeo.com/profile/002l2rv92h6uat3" target="_blank"><span class="socicon">k</span></a></li>
                             <li class="github"><a href="https://github.com/jc-paris/"><span class="socicon">Q</span></a></li>
-                            <li class="skp"><a href="#"><span class="socicon">g</span></a></li>
+                            <li class="skp"><a href="#" class="tip" title="epitech.paris_j"><span class="socicon">g</span><span class="text"></text></a></li>
                         </ul>
                     </div>
                 </header>
@@ -70,7 +94,7 @@
                                 <div class="profile-img"><img src="images/user_images/profile-img.jpg" alt="" /></div>
                                 <div class="profile-info">
                                     <h3>Développeur</h3>
-                                    <p>Étudiant en 4ème année à Epitech Paris, je suis passionné de développement mobile. Fort de mes 										connaissances acquises depuis le début de ma formation, je possède déjà une bonne maîtrise des 										langages de programmation.</p>
+                                    <p><a href="#" class="tip" title="epitech.paris_j"><span class="socicon">g</span></a>Étudiant en 4ème année à Epitech Paris, je suis passionné de développement mobile. Fort de mes 										connaissances acquises depuis le début de ma formation, je possède déjà une bonne maîtrise des 										langages de programmation.</p>
                                     <p>Je suis actuellement en recherche active d'une alternance de 3 jours par semaine (lun - mer) de juillet 2015 à février 2016</p>
                                 </div>
                             </div>
@@ -92,6 +116,21 @@
 										}
 										var age = _calculateAge(new Date('1993-06-16'));
 										jQuery('#age').html(age);
+										
+										jQuery('.skp').animate('width', 0.5);
+										jQuery('.skp').click(function(){
+											if (!jQuery('.skp').hasClass('show')) {
+												jQuery('.skp a .text').html(" epitech.paris_j");
+												$('.skp').animate({ "width": "+=100px" }, "slow" );
+												$('.skp .socicon').animate({ "margin-left": "-=100px" }, "slow" );
+												jQuery('.skp').addClass('show');
+											} else {
+												jQuery('.skp').removeClass('show');
+												jQuery('.skp a .text').html('');
+												$('.skp').animate({ "width": "-=100px" }, "slow" );
+												$('.skp .socicon').animate({ "margin-left": "+=100px" }, "slow" );
+											}
+										});
 									});
 									</script>
                                 </ul>
