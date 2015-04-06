@@ -276,6 +276,7 @@ a{cursor:pointer;}
 .head-social li.tw a:hover{background-position:0px -72px; border-color:#54aee1;color:#54aee1;}
 .head-social li.fb a:hover{background-position:-34px -72px; border-color:#4772af; color:#4772af;}
 .head-social li.viadeo a:hover{background-position:-34px -72px; border-color:#d67600; color:#d67600;}
+.head-social li.github a:hover{background-position:-34px -72px; border-color:#e8c9b1; color:#e8c9b1;}
 .head-social li.skp a:hover{background-position:-34px -72px; border-color:#62aded; color:#62aded;}
 .head-social li.lnkd a:hover{background-position:-68px -72px; border-color:#4178b4;color:#4178b4;}
 .head-social li.gplus a:hover{background-position:-102px -72px; border-color:#e43a3a;color:#e43a3a;}
@@ -1265,7 +1266,7 @@ textarea.form-item{height:71px; resize:none; width:490px;}
     text-transform: initial;
 }
 
-.fb a, .tw a, .gplus a, .lnkd a, .viadeo a, .skp a {
+.fb a, .tw a, .gplus a, .lnkd a, .viadeo a, .skp a, .github a {
 	color:#474C62;
 }
 
